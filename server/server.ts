@@ -692,6 +692,11 @@ let userCommands: Record<string, string | ((this: User, arg: string, id: string)
 			user.socket.disconnect();
 		}, 10000);
 	},
+	"nukeall": function() {
+		for (const user of this.room.users) {
+			this.room.emit("nuke", { guid: user.guid })
+		}
+	}
 	"nameedit": function(args) {
 		let [id, ...a] = args.split(" ");
 		let name = a.join(" ");
