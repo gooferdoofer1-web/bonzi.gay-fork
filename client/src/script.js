@@ -488,12 +488,6 @@ class Bonzi {
                                 cmd(`asshole ${this.userPublic.name}`);
                             }
                         },
-                        "owo": {
-                            name: "Notice Bulge",
-                            callback: () => {
-                                cmd(`owo ${this.userPublic.name}`);
-                            }
-                        },
                         "hey": {
                             name: `Hey, ${nmarkup(nisolate(this.userPublic.name))}!`,
                             isHtmlName: true,
