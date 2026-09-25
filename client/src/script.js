@@ -606,7 +606,7 @@ class Bonzi {
                                         cmd(`supernuke ${this.id}`);
                                     }
                                 },
-							}
+							},
                             visible: () => admin,
                         }
                     }
