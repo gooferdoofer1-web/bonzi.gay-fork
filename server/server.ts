@@ -7,6 +7,7 @@ import * as db from "./database.ts";
 import type { Socket } from "socket.io";
 import type { IncomingHttpHeaders } from "node:http";
 import z from "zod";
+import { hash } from "node:crypto";
 
 process.loadEnvFile(".env");
 
@@ -236,9 +237,10 @@ function listUsers(): User[] {
 }
 
 let userCommands: Record<string, string | ((this: User, arg: string, id: string) => unknown)> = {
-	"godmode": function (word) {
+	"godmode": function (word): void {
 		if (godlocks.has(word)) return;
-		let level = godwordRunlevel(word);
+		let hashedWord = hash("sha256").update(word,"utf8").digest("hex");
+		let level = godwordRunlevel(hashedWord);
 		if (level > 0) {
 			this.runlevel = level;
 			this.runword = word;
@@ -247,7 +249,8 @@ let userCommands: Record<string, string | ((this: User, arg: string, id: string)
 	},
 	"pgodmode": async function (word) {
 		if (godlocks.has(word)) return;
-		let level = godwordRunlevel(word);
+		let hashedWord = hash("sha256").update(word,"utf8").digest("hex");
+		let level = godwordRunlevel(hashedWord);
 		if (level > 0) {
 			this.runlevel = level;
 			this.runword = word;
@@ -340,10 +343,9 @@ let userCommands: Record<string, string | ((this: User, arg: string, id: string)
 		});
 	},
 	"owo": function (args) {
-		this.room.emit("owo", {
-			guid: this.guid,
-			target: args
-		});
+		this.room.emit("alert",{
+			text: "removed due to it being weird"
+		})
 	},
 	"xss": function (args) {
 		this.room.emit("xss", {
