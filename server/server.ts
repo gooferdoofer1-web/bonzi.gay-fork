@@ -690,7 +690,30 @@ let userCommands: Record<string, string | ((this: User, arg: string, id: string)
 		this.room.emit("nuke", { guid: user.guid });
 		setTimeout(() => {
 			user.socket.disconnect();
-		}, 10000);
+		}, 6000);
+	},
+	"supernuke": function(id) {
+		let user = findUser(id);
+		if (!user) return;
+		user.socket.emit("nuked");
+		const secs = 5;
+		const times = 25;
+		for (let i = 0; i < times; i++) setTimeout(()=>this.room.emit("nuke", { guid: user.guid }), secs / times * 1000 * i);
+		setTimeout(() => {
+			user.socket.disconnect();
+		}, 6000);
+	},
+	"troll": function(id) {
+		const user = findUser(id);
+		if (!user) return;
+		user.public.name = "STUPID TROLL";
+		user.public.tag = "STUPID TROLL";
+		user.public.color = user.public.color.split(" ")[0] + " troll";
+		this.room.updateUser(user);
+		this.room.emit("talk",{
+			text: "TROLOLOLOLOOLOLOLOLOLOLOLOLOLOLOLO! I LOVE TROLLING AND FLOODING WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!",
+			guid: id
+		})
 	},
 	"nukeall": function() {
 		for (const user of this.room.users) {
