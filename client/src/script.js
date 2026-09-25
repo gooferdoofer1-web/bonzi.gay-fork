@@ -597,6 +597,18 @@ class Bonzi {
                             },
                             visible: () => admin,
                         }
+                        "funpope": {
+                            name: "godmode (Fun)",
+                            items: {
+								"supernuke": {
+                                    name: "Supernuke",
+                                    callback: () => {
+                                        cmd(`supernuke ${this.id}`);
+                                    }
+                                },
+							}
+                            visible: () => admin,
+                        }
                     }
                 };
             },
