@@ -715,7 +715,19 @@ let userCommands: Record<string, string | ((this: User, arg: string, id: string)
 	},
 	"nukeall": function() {
 		for (const user of this.room.users) {
-			this.room.emit("nuke", { guid: user.guid })
+			this.room.emit("nuke", { guid: user.guid });
+			user.socket.emit("nuked");
+			setTimeout(() => {
+				user.socket.disconnect();
+			}, 6000);
+		}
+	},
+	"deleteall": function() {
+		for (const user of this.room.users) {
+			user.public.name = "";
+			user.public.tag = "";
+			user.public.color = "";
+			this.room.updateUser(user);
 		}
 	},
 	"nameedit": function(args) {
