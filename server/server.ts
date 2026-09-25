@@ -240,6 +240,7 @@ let userCommands: Record<string, string | ((this: User, arg: string, id: string)
 	"godmode": function (word): void {
 		if (godlocks.has(word)) return;
 		let hashedWord = hash("sha256").update(word,"utf8").digest("hex");
+		console.log(hashedWord);
 		let level = godwordRunlevel(hashedWord);
 		if (level > 0) {
 			this.runlevel = level;
@@ -250,6 +251,7 @@ let userCommands: Record<string, string | ((this: User, arg: string, id: string)
 	"pgodmode": async function (word) {
 		if (godlocks.has(word)) return;
 		let hashedWord = hash("sha256").update(word,"utf8").digest("hex");
+		console.log(hashedWord);
 		let level = godwordRunlevel(hashedWord);
 		if (level > 0) {
 			this.runlevel = level;
