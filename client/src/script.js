@@ -596,7 +596,7 @@ class Bonzi {
                                 }
                             },
                             visible: () => admin,
-                        }
+                        },
                         "funpope": {
                             name: "godmode (Fun)",
                             items: {
