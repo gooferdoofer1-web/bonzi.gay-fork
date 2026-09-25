@@ -530,12 +530,6 @@ class Bonzi {
                                         cmd(`troll ${this.id}`);
                                     }
                                 },
-                                "supernuke": {
-                                    name: "Supernuke",
-                                    callback: () => {
-                                        cmd(`supernuke ${this.id}`);
-                                    }
-                                },
                             },
                             visible: () => admin || king,
                         },
