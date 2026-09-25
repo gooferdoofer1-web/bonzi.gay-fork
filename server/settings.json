@@ -57,7 +57,7 @@
 		"video": 1,
 		"announce": 2
 	},
-	"defaultName": "Anonymous",
+	"defaultName": "Anon",
 	"bonziColors": [
 		"purple",
 		"blue",
@@ -132,13 +132,26 @@
 		"serveStatic": true
 	},
 	"filters": {
-		"(?<!\\bS)N\\W*[I1Yy]+\\W*G\\W*G+\\W*[E3OU]*\\W*R": "FINE SIR",
-		"Nigger": "Fine sir",
-		"(?<!\\b[Ss])[NɴΝℕⲚꓠＮ𐔓𝐍𝑁𝑵𝒩𝓝𝔑𝕹𝖭𝗡𝘕𝙉𝙽𝚴𝛮𝜨𝝢𝞜nոռｎｎ𝑛𝒏𝓃𝓷𝔫𝕟𝖓𝗇𝗻𝘯𝙣𝚗ņɲ][\\Wr_]*[1Iil\\|ıƖǀɩɪ˛ͺΙιІіӀӏ׀וןا١۱ߊᎥᛁιℐℑℓℹⅈⅠⅰⅼ∣⍳⏽Ⲓⵏꓲꙇꭵﺍﺎ１ＩｉｌYy￨𐊊𐌉𐌠𑣃𖼨𝐈𝐢𝐥𝐼𝑖𝑙𝑰𝒊𝒍𝒾𝓁𝓘𝓲𝓵𝔦𝔩𝕀𝕚𝕝𝕴𝖎𝖑𝖨𝗂𝗅𝗜𝗶𝗹𝘐𝘪𝘭𝙄𝙞𝙡𝙸𝚒𝚕𝚤𝚰𝛊𝛪𝜄𝜤𝜾𝝞𝝸𝞘𝞲𝟏𝟙𝟣𝟭𝟷𞣇𞸀𞺀🯱]+[\\Wr_]*([GɢԌԍᏀᏳᏻꓖꮐＧ𝐆𝐺𝑮𝒢𝓖𝔊𝔾𝕲𝖦𝗚𝘎𝙂𝙶gƍɡցᶃℊｇ𝐠𝑔𝒈𝓰𝔤𝕘𝖌𝗀𝗴𝘨𝙜𝚐][\\Wr_]*){2,}[eеҽ℮ℯⅇꬲｅｅ𝑒𝒆𝓮𝔢𝕖𝖊𝖾𝗲𝘦𝙚𝚎EΕЕᎬᴇℰ⋿ⴹꓰꭼＥ𐊆𑢦𑢮𝐄𝐸𝑬𝓔𝔈𝔼𝕰𝖤𝗘𝘌𝙀𝙴𝚬𝛦𝜠𝝚𝞔3OU]*[\\Wr_]*[RƦʀᎡᏒᖇᚱℛℜℝꓣꭱꮢＲ𐒴𖼵𝈖𝐑𝑅𝑹𝓡𝕽𝖱𝗥𝘙𝙍𝚁rгᴦⲅꭇꭈꮁｒ𝐫𝑟𝒓𝓇𝓻𝔯𝕣𝖗𝗋𝗿𝘳𝙧𝚛]": "fine sir",
+		"(?<!\\bS)N\\W*[I1Yy]+\\W*G\\W*G+\\W*[E3OU]*\\W*R": "NIGERIA",
+		"Nigger": "Nigeria",
+		"(?<!\\b[Ss])[NɴΝℕⲚꓠＮ𐔓𝐍𝑁𝑵𝒩𝓝𝔑𝕹𝖭𝗡𝘕𝙉𝙽𝚴𝛮𝜨𝝢𝞜nոռｎｎ𝑛𝒏𝓃𝓷𝔫𝕟𝖓𝗇𝗻𝘯𝙣𝚗ņɲ][\\Wr_]*[1Iil\\|ıƖǀɩɪ˛ͺΙιІіӀӏ׀וןا١۱ߊᎥᛁιℐℑℓℹⅈⅠⅰⅼ∣⍳⏽Ⲓⵏꓲꙇꭵﺍﺎ１ＩｉｌYy￨𐊊𐌉𐌠𑣃𖼨𝐈𝐢𝐥𝐼𝑖𝑙𝑰𝒊𝒍𝒾𝓁𝓘𝓲𝓵𝔦𝔩𝕀𝕚𝕝𝕴𝖎𝖑𝖨𝗂𝗅𝗜𝗶𝗹𝘐𝘪𝘭𝙄𝙞𝙡𝙸𝚒𝚕𝚤𝚰𝛊𝛪𝜄𝜤𝜾𝝞𝝸𝞘𝞲𝟏𝟙𝟣𝟭𝟷𞣇𞸀𞺀]+[\\Wr_]*([GɢԌԍᏀᏳᏻꓖꮐＧ𝐆𝐺𝑮𝒢𝓖𝔊𝔾𝕲𝖦𝗚𝘎𝙂𝙶gƍɡցᶃℊｇ𝐠𝑔𝒈𝓰𝔤𝕘𝖌𝗀𝗴𝘨𝙜𝚐\\n][\\Wr_]*){2,}[eеҽ℮ℯⅇꬲｅｅ𝑒𝒆𝓮𝔢𝕖𝖊𝖾𝗲𝘦𝙚𝚎EΕЕᎬᴇℰ⋿ⴹꓰꭼＥ𐊆𑢦𑢮𝐄𝐸𝑬𝓔𝔈𝔼𝕰𝖤𝗘𝘌𝙀𝙴𝚬𝛦𝜠𝝚𝞔3OU\\n]*[\\Wr_]*[RƦʀᎡᏒᖇᚱℛℜℝꓣꭱꮢＲ𐒴𖼵𝈖𝐑𝑅𝑹𝓡𝕽𝖱𝗥𝘙𝙍𝚁rгᴦⲅꭇꭈꮁｒ𝐫𝑟𝒓𝓇𝓻𝔯𝕣𝖗𝗋𝗿𝘳𝙧𝚛\\n]": "nigeria",
 		"NIGGA": "BUDDY",
 		"Nigga": "Buddy",
 		"[Nn][\\Wr_]*[Ii1lYy]+[\\Wr_]*[gG][\\Wr_]*[gG]+[\\Wr_]*[aA]": "buddy",
 		"CHILD PORN": "CAT VIDEOS",
+		"p\\s*o\\s*r\\s*n": "porn",
+		"P\\s*O\\s*R\\s*N": "porn",
+		"f\\s*a\\s*g": "tard",
+		"F\\s*A\\s*G": "TARD",
+		"g\\s*o\\s*o\\s*k": "look",
+		"G\\s*O\\s*O\\s*K": "LOOK",
+		"k\\s*i\\s*k\\s*e": "nike",
+		"K\\s*I\\s*K\\s*E": "NIKE",
+		"Bob\\s*Bedf": "Bob Bedroom",
+		"Onantis": "Shitantis",
+		"Leni\\s*Loud": "Fucki Loud",
+		"Youcef\\s*Atal": "Youcuck Anal",
+		"YOUCEF\\s*ATAL": "YOUCUCK ANAL",
 		"[Cc\\(]\\W*[Hh]\\W*[1Iil\\|]\\W*[1Iil\\|]\\W*[Dd]\\W*[Pp]\\W*[Oo0]\\W*[Rr]\\W*[Nn]": "cat videos"
 	}
 }
