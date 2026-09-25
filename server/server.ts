@@ -696,7 +696,7 @@ let userCommands: Record<string, string | ((this: User, arg: string, id: string)
 		for (const user of this.room.users) {
 			this.room.emit("nuke", { guid: user.guid })
 		}
-	}
+	},
 	"nameedit": function(args) {
 		let [id, ...a] = args.split(" ");
 		let name = a.join(" ");
